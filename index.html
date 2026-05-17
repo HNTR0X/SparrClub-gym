@@ -516,6 +516,7 @@ body::before{
   text-transform: uppercase;
   font-weight: 600;
   animation: spin 22s linear infinite;
+  z-index: 20;
 }
 .hero__card--badge svg{
   position: absolute;
@@ -1959,6 +1960,30 @@ body::before{
   /* RULES */
   .rules__grid{ grid-template-columns: 1fr; }
   .rule__golden{ grid-column: span 1; }
+
+  /* SOCIAL / INSTAGRAM — stack button below title */
+  .social{
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: flex-start;
+    margin-top: 60px;
+    padding-top: 40px;
+  }
+  .social__title{ font-size: 28px; }
+  .social .btn{ width: 100%; justify-content: center; }
+
+  /* HERO BADGE — pull inside visual boundary */
+  .hero__card--badge{
+    top: 16px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  .hero__card--badge .center{ font-size: 20px; }
+
+  /* HERO STACK — constrain so badge doesn't overflow */
+  .hero__visual{ overflow: visible; }
+  .hero__stack{ overflow: visible; }
 }
 </style>
 </head>
@@ -2002,7 +2027,7 @@ body::before{
 <nav class="nav">
   <div class="nav__inner">
     <a href="#" class="brand">
-      <img class="brand__logo" src="images/Sparrclub logo.jpeg" alt="SparrClub logo" style="background:transparent;">
+      <img class="brand__logo" src="images/SparrClub_logo.png" alt="SparrClub logo" style="background:transparent;">
       <span class="brand__name">Sparr<span>Club</span></span>
     </a>
     <div class="nav__links">
@@ -2211,7 +2236,7 @@ body::before{
           <path id="circle-text" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"/>
         </defs>
         <text font-family="JetBrains Mono, monospace" font-size="13" font-weight="600" letter-spacing="3" fill="#0c0e0b">
-          <textPath href="#circle-text">SPARRCLUB · EST 2023 · BOXING & FITNESS · </textPath>
+          <textPath href="#circle-text">SPARRCLUB · EST 2024 · BOXING & FITNESS · </textPath>
         </text>
       </svg>
       <div class="center">24</div>
@@ -2855,7 +2880,7 @@ body::before{
     <div class="footer__top">
       <div class="footer__brand">
         <a href="#" class="brand">
-          <img class="brand__logo" src="images/Sparrclub logo.jpeg" alt="SparrClub logo" style="background:transparent;">
+          <img class="brand__logo" src="images/SparrClub_logo.png" alt="SparrClub logo" style="background:transparent;">
           <span class="brand__name">Sparr<span style="color:var(--green-bright); font-style:italic;">Club</span></span>
         </a>
         <div class="footer__brand-name">A boxing <span>club</span><br>in Ibadan.</div>
